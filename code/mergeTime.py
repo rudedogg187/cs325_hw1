@@ -11,7 +11,7 @@ logName = "sort_tests.csv"
 minVal = 0
 maxVal = 10000
 strtN = 5000
-nIncr = 5000
+nIncr = 2500
 tests = 10
 
 

@@ -31,6 +31,13 @@ def addLogData(logFile, data):
     for row in data:
       csv_writer.writerow(row)
   
+def addLogDatum(logFile, datum):
+  if doesLogExist(logFile) == False:
+    makeNewLog(logFile)
+
+  addLogData(logFile, [datum])
+
+  
 
 
 def main():  
