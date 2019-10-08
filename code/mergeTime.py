@@ -10,9 +10,9 @@ logName = "sort_tests.csv"
 
 minVal = 0
 maxVal = 10000
-strtN = 0
-nIncr = 2500
-tests = 50
+strtN = 100000
+nIncr = 10000
+tests = 10
 
 
 tstLst = randomArray.lstOfLsts(minVal, maxVal, strtN, nIncr, tests)
