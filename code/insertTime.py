@@ -1,5 +1,5 @@
 import timeit
-import insertionsort
+import insertsort
 import cleanup
 import randomArray
 import testLogger
@@ -9,9 +9,9 @@ logName = "sort_tests.csv"
 
 minVal = 0
 maxVal = 10000
-strtN = 0
-nIncr = 2500
-tests = 50
+strtN = 3000
+nIncr = 2000
+tests = 10
 
 
 tstLst = randomArray.lstOfLsts(minVal, maxVal, strtN, nIncr, tests)
@@ -22,7 +22,7 @@ for tst in tstLst:
   n = len(tst)
   strt = timeit.default_timer()
   print("test: {}\nn: {}".format(i, n))
-  insertionsort.insertionSort( tst)
+  insertsort.insertionSort( tst)
 
   end = timeit.default_timer()
   t = end - strt 

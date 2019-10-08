@@ -1,3 +1,12 @@
+###################
+# HUGHES, JOSHU L
+# CS325 OSU
+# MERGE SORT
+# ASSIGNMENT 1
+# 07 OCT 2019
+##################
+
+
 import fileHandler
 
 
@@ -15,6 +24,7 @@ savePath = "{}.txt".format(SORT_TYPE)
 
 
 def mergeSort(lst, p, r):
+  '''REF PSUDO CODE FROM TEXT (INTO TO ALGORTHIMS V3)'''
   #if p < r
   #  q = |(p + r) / 2|
   #  MergeSort(A, p, q)
@@ -32,6 +42,8 @@ def mergeSort(lst, p, r):
 
 
 def merge(lst, p, q, r):
+ 
+  '''REF PSUDO CODE FROM TEXT (INTO TO ALGORTHIMS V3)'''
   #n_1 = q - p + 1
   #n_2 = r - q
   #let L[1..n_1] and R[1..n_2 + 1] be new arrays
@@ -76,6 +88,9 @@ def merge(lst, p, q, r):
   k = p
 
   x = 0 
+
+  '''REF://www.geeksforgeeks.org/merge-sort/'''
+  
   while i < n_1 and j < n_2:
     # x = i + j
     # print (n_1, n_2, r)
@@ -109,20 +124,11 @@ def main():
 
   for lst in fileContent[0:100]:
     mergeSort(lst, 0, len(lst) - 1)
-    print (lst)
-  '''
 
-  lst = [12, 11, 13, 5, 6, 7]
-  #lst = ["19", "2", "5", "11"]
-  print lst
-  mergeSort(lst, 0, len(lst) - 1)
-
-  print lst
-  '''
  
 
   # write sorted data to output file
-  #fileHandler.writeFile(savePath, fileContent)
+  fileHandler.writeFile(savePath, fileContent)
 
 
 
